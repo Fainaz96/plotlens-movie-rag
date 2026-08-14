@@ -1,0 +1,36 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATASET_PATH: /workspace/data/movies.csv
+      EMBEDDING_CACHE_DIR: /workspace/backend/.cache/embeddings
+      FRONTEND_ORIGIN: http://localhost:3100
+    ports:
+      - "8100:8100"
+    volumes:
+      - embedding-cache:/workspace/backend/.cache/embeddings
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8100/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+  web:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8100
+    ports:
+      - "3100:3100"
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  embedding-cache:

@@ -1,0 +1,43 @@
+[
+  {
+    "query": "Which film follows astronaut Dave Bowman and the HAL 9000 computer?",
+    "expected_title": "2001: A Space Odyssey"
+  },
+  {
+    "query": "In which movie does Neo discover that humanity lives inside a simulated reality?",
+    "expected_title": "The Matrix"
+  },
+  {
+    "query": "Which film tells the romance of Jack and Rose aboard a doomed ocean liner?",
+    "expected_title": "Titanic"
+  },
+  {
+    "query": "Which movie follows the Corleone crime family and Michael's rise to power?",
+    "expected_title": "The Godfather"
+  },
+  {
+    "query": "In which animated film do Woody and Buzz Lightyear come to life as toys?",
+    "expected_title": "Toy Story"
+  },
+  {
+    "query": "Which thriller features Marion Crane and the isolated Bates Motel?",
+    "expected_title": "Psycho"
+  },
+  {
+    "query": "Which science-fiction horror film has the crew of the Nostromo encounter a deadly creature?",
+    "expected_title": "Alien"
+  },
+  {
+    "query": "Which movie follows a police chief hunting a great white shark near Amity Island?",
+    "expected_title": "Jaws"
+  },
+  {
+    "query": "Which film sends a cyborg assassin back in time to kill Sarah Connor?",
+    "expected_title": "The Terminator"
+  },
+  {
+    "query": "Which movie has Marty McFly travel to 1955 in a DeLorean time machine?",
+    "expected_title": "Back to the Future"
+  }
+]
+
