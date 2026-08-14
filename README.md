@@ -4,7 +4,6 @@
 
 PlotLens connects a reproducible movie dataset to OpenAI embeddings, Chroma retrieval, and an OpenAI language model. Every answer is returned as structured JSON and displayed beside the exact plot passages used to form it.
 
-![PlotLens evidence view](docs/plotlens-ui.png)
 
 ## Why this implementation
 
