@@ -4,6 +4,7 @@
 
 PlotLens connects a reproducible movie dataset to OpenAI embeddings, Chroma retrieval, and an OpenAI language model. Every answer is returned as structured JSON and displayed beside the exact plot passages used to form it.
 
+![PlotLens landing experience](docs/Screenshot%202026-08-14%20203201.png)
 
 ## Why this implementation
 
@@ -17,6 +18,19 @@ The assignment asks for a clear path from data → embeddings → retrieval → 
 - **OpenAI Responses API Structured Outputs** for a validated answer and evidence rationale
 - **Server-owned contexts**, so the model cannot invent which passages were retrieved
 - **FastAPI + Next.js** with Docker and native run paths
+
+## Product walkthrough
+
+| Ask a movie-plot question | Inspect the grounded answer |
+|---|---|
+| ![PlotLens question interface with example prompts](docs/Screenshot%202026-08-14%20203301.png) | ![PlotLens grounded answer with retrieved evidence and similarity scores](docs/Screenshot%202026-08-14%20203351.png) |
+| **Question experience:** keyboard-friendly input, real subset examples, and index statistics. | **Evidence view:** direct answer, top-five retrieved passages, source titles, snippets, and scores. |
+
+### Exact structured response
+
+![PlotLens raw JSON response with copy control](docs/Screenshot%202026-08-14%20203442.png)
+
+The Raw JSON view exposes the same `answer`, server-owned `contexts`, scores, chunk IDs, and concise evidence `reasoning` returned by the API, with one-click copying for reviewer verification.
 
 ## Data Architecture
 
